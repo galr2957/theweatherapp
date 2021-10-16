@@ -5,7 +5,7 @@ import CityForcast from '../../components/CityForcast/CityForcast.js'
 import SearchForm from '../../components/SearchForm/SearchForm.js'
 import {useSelector, useDispatch} from 'react-redux'
 import {requestCities, setChosenCity, requestOneDayForcast, hideFiveDaysForacst, resetResultsArray, setOneDayForacst} from '../../actions'
-import {ButtonGroup,Grid} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 
 const Body = () => {
 
@@ -22,7 +22,7 @@ const Body = () => {
 	}
 
 	const onSearch = (value) => {
-		(value.length != 0)?
+		(value.length !== 0)?
 		dispatch(requestCities(value))
 		:
 		dispatch(resetResultsArray());

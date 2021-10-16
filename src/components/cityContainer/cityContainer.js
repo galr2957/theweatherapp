@@ -1,7 +1,5 @@
 import React from 'react';
 import './cityContainer.css';
-import {Button} from '@material-ui/core';
-import LocationOn from '@material-ui/icons/LocationOn';
 
 
 const cityContainer = ({ city, onDivClick }) => {

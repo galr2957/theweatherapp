@@ -1,10 +1,10 @@
 import React from 'react';
-import {Grid, Box, Paper} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 import {useSelector} from 'react-redux';
 import CalenderIcon from '@material-ui/icons/CalendarToday';
 import ArrowBack from '@material-ui/icons/ArrowBack';
 import {useDispatch} from 'react-redux'
-import {hideFiveDaysForacst, setOneDayForacst} from '../../actions'
+import {hideFiveDaysForacst} from '../../actions'
 
 
 const FiveDaysForcast = () => {

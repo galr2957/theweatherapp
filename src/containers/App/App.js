@@ -2,7 +2,6 @@ import './App.css';
 import Navigation from '../../components/Navigation/Navigation.js'
 import Body from '../Body/Body.js'
 import Favorites from '../Favorites/Favorites.js'
-import {Avatar} from  '@material-ui/core';
 import {useSelector} from 'react-redux'
 
 

@@ -18,8 +18,6 @@ export const handleFavorites = (state= initialStateFavorites, action={} ) => {
         const newArray = [...state.favorites, action.payload]
         return Object.assign({}, state, {favorites: newArray})
       }
-      const newArray = [...state.favorites, action.payload]
-      return Object.assign({}, state, {favorites: newArray})
     case REMOVE_FROM_FAVORITES:
       const filteredFavorites = state.favorites.filter(city => city.Key !== action.payload)
       return Object.assign({}, state, {favorites: filteredFavorites})
