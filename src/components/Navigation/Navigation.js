@@ -39,7 +39,7 @@ const Navigation = () => {
 				  <Grid item xs={3} >
 				         <Tilt className="Tilt" options={{ max : 45 }} style={{ height: 120, width: 120}} >
                                <div className="Tilt-inner "> 
-                                    <img alt='' id={'webSiteIcon'} src={icon}/> 
+                                    <img alt='' id={'websiteIcon'} src={icon}/> 
                                </div>
                          </Tilt> 
 				   </Grid>
