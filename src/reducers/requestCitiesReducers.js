@@ -11,7 +11,7 @@ import {initialcity, cities} from '../initialCity' //intial db for dev
 
 
 const initialStateCities = {
-  cities: cities,
+  cities: [],
   isPending: false
 }
 
