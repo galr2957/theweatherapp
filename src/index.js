@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './containers/App/App.js';
 import reportWebVitals from './reportWebVitals';
+import 'tachyons';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunkMiddleware from 'redux-thunk';
+import rootReducers from './reducers/reducersCombiner.js'
+
+import './index.css';
+
+const store = createStore(rootReducers, applyMiddleware(thunkMiddleware))
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Provider store={store}>
+         <App/>
+      </Provider>,
   </React.StrictMode>,
   document.getElementById('root')
 );

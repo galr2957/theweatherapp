@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+  margin: 0px auto;
+  max-width:1800px;
+
+}
+
+
+
+body {
+    background: linear-gradient(0deg, #87CEEB, #FFFFFF);
+    height: 100%;
+    font-family: courier New;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
