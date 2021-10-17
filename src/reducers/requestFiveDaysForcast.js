@@ -5,7 +5,7 @@ import {
 
  } from '../constants'
 
-import {initialFiveDaysforcast} from '../initialCity' //intial db for dev 
+import {initialFiveDaysforcast} from '../initialState' //intial db for dev 
 
 const initialStateFiveDaysForcast = {
   FiveDaysforcast: initialFiveDaysforcast,

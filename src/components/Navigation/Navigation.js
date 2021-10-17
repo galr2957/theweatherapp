@@ -18,9 +18,6 @@ const Navigation = () => {
 
 	const showfavoritepage = () => {
         dispatch(showFavoritePage());
-        dispatch(showFavoritePage());
-        dispatch(showFavoritePage());
-
 	}
 
 	return (

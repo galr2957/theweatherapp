@@ -34,7 +34,7 @@ export const hideFiveDaysForacst = () => ({type: HIDE_FIVE_DAY_FORCAST})
 
 export const requestCities = (cityName) => (dispatch) => {
   dispatch({ type: REQUEST_CITIES_PENDING })
-  fetch('https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=GGqVXPf9g4xzyUl2jPGxaiSsprYLSFXM&q='+cityName).then(response => response.json())
+  fetch('https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=8xJUQWLGqD48OliATlNnUwHGKBqroaUA&q='+cityName).then(response => response.json())
     .then(data => dispatch({ type: REQUEST_CITIES_SUCCESS, payload: data }))
     .catch(error => dispatch({ type: REQUEST_CITIES_FAILED, payload: error }))
 }
@@ -46,7 +46,7 @@ export const setChosenCity = (city) => ({type: SET_CHOSEN_CITY, payload: city})
 
 export const requestOneDayForcast = (cityKey) => (dispatch) => {
   dispatch({ type: REQUEST_ONE_DAY_FORCAST_PENDING })
-  fetch('https://dataservice.accuweather.com/currentconditions/v1/'+ cityKey +'?apikey=GGqVXPf9g4xzyUl2jPGxaiSsprYLSFXM').then(response => response.json())
+  fetch('https://dataservice.accuweather.com/currentconditions/v1/'+ cityKey +'?apikey=8xJUQWLGqD48OliATlNnUwHGKBqroaUA').then(response => response.json())
     .then(data => dispatch({ type: REQUEST_ONE_DAY_FORCAST_SUCCESS, payload: data[0] }))
     .catch(error => dispatch({ type: REQUEST_ONE_DAY_FORCAST_FAILED, payload: error }))
 }
@@ -54,7 +54,7 @@ export const requestOneDayForcast = (cityKey) => (dispatch) => {
 
 export const requestFiveDaysForcast = (cityKey) => (dispatch) => {
   dispatch({ type: REQUEST_FIVE_DAY_FORCAST_PENDING })
-  fetch('https://dataservice.accuweather.com/forecasts/v1/daily/5day/'+ cityKey +'?apikey=GGqVXPf9g4xzyUl2jPGxaiSsprYLSFXM&metric=true').then(response => response.json())
+  fetch('https://dataservice.accuweather.com/forecasts/v1/daily/5day/'+ cityKey +'?apikey=8xJUQWLGqD48OliATlNnUwHGKBqroaUA&metric=true').then(response => response.json())
     .then(data => dispatch({ type: REQUEST_FIVE_DAY_FORCAST_SUCCESS, payload: data }))
     .catch(error => dispatch({ type: REQUEST_FIVE_DAY_FORCAST_FAILED, payload: error }))
 }

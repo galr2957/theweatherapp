@@ -45,7 +45,10 @@ const OneDayForcast = () => {
           <h2>{currentCitySelector.LocalizedName} / </h2>
           <h2> {currentCitySelector.Country.LocalizedName} </h2>
           <p>  {oneDayForcast.LocalObservationDateTime.split('T')[0]} </p>
-          <p> {oneDayForcast.LocalObservationDateTime.split('T')[1].split('+')[0]} </p>
+          <p> {oneDayForcast.LocalObservationDateTime.split('T')[1]?
+                  oneDayForcast.LocalObservationDateTime.split('T')[1].split('+')[0]
+               :
+                  null} </p>
           <p> {oneDayForcast.Temperature.Metric.Value}  {oneDayForcast.Temperature.Metric.Unit}</p>
           
           <img alt='' id={'weathericon'} src={'https://developer.accuweather.com/sites/default/files/'+ getWeatherIcon(oneDayForcast.WeatherIcon) +'-s.png'} width= "200px"/>

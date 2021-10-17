@@ -1,7 +1,8 @@
 import {Grid} from '@material-ui/core';
 import CityCard from '../../components/CityCard/CityCard.js'
 import CityForcast from '../../components/CityForcast/CityForcast.js'
-import {removeFromFavorites, setChosenCity, setOneDayForacst, hideOneDayForacst, requestOneDayForcast} from '../../actions'
+import {removeFromFavorites, setChosenCity, setOneDayForacst, requestOneDayForcast} from '../../actions'
+import { hideOneDayForacst, hideFiveDaysForacst } from '../../actions'
 import {useSelector, useDispatch} from 'react-redux'
 import ArrowBack from '@material-ui/icons/ArrowBack';
 import FavoriteIcon from '@material-ui/icons/Favorite';
@@ -28,6 +29,7 @@ function Favorites() {
 
    const onArrowClick = () => {
     dispatch(hideOneDayForacst());
+    dispatch(hideFiveDaysForacst());
   }
 
   return (

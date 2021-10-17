@@ -7,7 +7,7 @@ import {
   SET_CHOSEN_CITY
  } from '../constants'
 
-import {initialcity} from '../initialCity' //intial db for dev 
+import {initialcity} from '../initialState' //intial db for dev 
 
 
 const initialStateCities = {
